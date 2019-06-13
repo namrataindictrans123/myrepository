@@ -1,0 +1,296 @@
+{
+ "etype": "NameError", 
+ "evalue": "NameError(\"global name 'send_mail' is not defined\",)", 
+ "exception": {
+  "args": "(\"global name 'send_mail' is not defined\",)", 
+  "message": "\"global name 'send_mail' is not defined\""
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://localhost:8989/' [POST]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/indictrans/...epo/frappe-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.desk.form.save.savedocs'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.desk.form.save.savedocs', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'action': u'Submit', 'doc': u'{\"password2\":\"***...92Z\"}', 'cmd': u'frappe.desk.form.save.savedocs'}", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function savedocs>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function savedocs>, *args=(), **kwargs={'action': u'Submit', 'cmd': u'frappe.desk.form.save.savedocs', 'doc': u'{\"password2\":\"*****\",\"last_name\":\"Kulkarni\",\"p...ia\",\"__last_sync_on\":\"2019-06-13T05:23:52.292Z\"}'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function savedocs>", 
+    "newargs": "{'action': u'Submit', 'doc': u'{\"password2\":\"*****\",\"last_name\":\"Kulkarni\",\"p...ia\",\"__last_sync_on\":\"2019-06-13T05:23:52.292Z\"}'}"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1030": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1031": "", 
+    "1032": "\treturn fn(*args, **newargs)", 
+    "1033": "", 
+    "1034": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1032
+  }, 
+  {
+   "call": "(doc=<tourism.tourism.doctype.registration.registration.Registration object>, action=u'Submit')", 
+   "dump": {
+    "doc": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "doc. submit": "<bound method Registration.submit of <tourism.to...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/save.py", 
+   "func": "savedocs", 
+   "lines": {
+    "17": "", 
+    "18": "\t\tif doc.docstatus==1:", 
+    "19": "\t\t\tdoc.submit()", 
+    "20": "\t\telse:", 
+    "21": "\t\t\ttry:"
+   }, 
+   "lnum": 19
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>)", 
+   "dump": {
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "self. _submit": "<bound method Registration._submit of <tourism.t...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "submit", 
+   "lines": {
+    "846": "\tdef submit(self):", 
+    "847": "\t\t\"\"\"Submit the document. Sets `docstatus` = 1, then saves.\"\"\"", 
+    "848": "\t\tself._submit()", 
+    "849": "", 
+    "850": "\t@whitelist.__func__"
+   }, 
+   "lnum": 848
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>)", 
+   "dump": {
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "self. save": "<bound method Registration.save of <tourism.tour...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "_submit", 
+   "lines": {
+    "835": "\t\t\"\"\"Submit the document. Sets `docstatus` = 1, then saves.\"\"\"", 
+    "836": "\t\tself.docstatus = 1", 
+    "837": "\t\tself.save()", 
+    "838": "", 
+    "839": "\t@whitelist.__func__"
+   }, 
+   "lnum": 837
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "kwargs": "{}", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "self. _save": "<bound method Registration._save of <tourism.tou...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "save", 
+   "lines": {
+    "258": "\tdef save(self, *args, **kwargs):", 
+    "259": "\t\t\"\"\"Wrapper for _save\"\"\"", 
+    "260": "\t\treturn self._save(*args, **kwargs)", 
+    "261": "", 
+    "262": "\tdef _save(self, ignore_permissions=None, ignore_version=None):"
+   }, 
+   "lnum": 260
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, ignore_permissions=None, ignore_version=None)", 
+   "dump": {
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "self. run_post_save_methods": "<bound method Registration.run_post_save_methods...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "_save", 
+   "lines": {
+    "311": "", 
+    "312": "\t\tself.update_children()", 
+    "313": "\t\tself.run_post_save_methods()", 
+    "314": "", 
+    "315": "\t\treturn self"
+   }, 
+   "lnum": 313
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>)", 
+   "dump": {
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "self. run_method": "<bound method Registration.run_method of <touris...e.registration.registration.Registration object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_post_save_methods", 
+   "lines": {
+    "906": "\t\telif self._action==\"submit\":", 
+    "907": "\t\t\tself.run_method(\"on_update\")", 
+    "908": "\t\t\tself.run_method(\"on_submit\")", 
+    "909": "\t\telif self._action==\"cancel\":", 
+    "910": "\t\t\tself.run_method(\"on_cancel\")"
+   }, 
+   "lnum": 908
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, method=u'on_submit', *args=(), **kwargs={})", 
+   "dump": {
+    "Document. hook": "<function hook>", 
+    "args": "()", 
+    "fn": "<function on_submit>", 
+    "global Document": "<class 'frappe.model.document.Document'>", 
+    "kwargs": "{}", 
+    "out": "undefined", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "run_method", 
+   "lines": {
+    "770": "", 
+    "771": "\t\tfn.__name__ = str(method)", 
+    "772": "\t\tout = Document.hook(fn)(self, *args, **kwargs)", 
+    "773": "", 
+    "774": "\t\tself.run_notifications(method)"
+   }, 
+   "lnum": 772
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "composed": "<function runner>", 
+    "kwargs": "{}", 
+    "method": "'on_submit'", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "composer", 
+   "lines": {
+    "1046": "", 
+    "1047": "\t\t\tcomposed = compose(f, *hooks)", 
+    "1048": "\t\t\treturn composed(self, method, *args, **kwargs)", 
+    "1049": "", 
+    "1050": "\t\treturn composer"
+   }, 
+   "lnum": 1048
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, method='on_submit', *args=(), **kwargs={})", 
+   "dump": {
+    "add_to_return_value": "<function add_to_return_value>", 
+    "args": "()", 
+    "fn": "<function on_submit>", 
+    "kwargs": "{}", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "runner", 
+   "lines": {
+    "1029": "\t\tdef compose(fn, *hooks):", 
+    "1030": "\t\t\tdef runner(self, method, *args, **kwargs):", 
+    "1031": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))", 
+    "1032": "\t\t\t\tfor f in hooks:", 
+    "1033": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   }, 
+   "lnum": 1031
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>, *args=(), **kwargs={})", 
+   "dump": {
+    "args": "()", 
+    "builtin getattr": "<built-in function getattr>", 
+    "fn": "undefined", 
+    "kwargs": "{}", 
+    "method": "u'on_submit'", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", 
+   "func": "<lambda>", 
+   "lines": {
+    "764": "", 
+    "765": "\t\tif hasattr(self, method) and hasattr(getattr(self, method), \"__call__\"):", 
+    "766": "\t\t\tfn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)", 
+    "767": "\t\telse:", 
+    "768": "\t\t\t# hack! to run hooks even if method does not exist"
+   }, 
+   "lnum": 766
+  }, 
+  {
+   "call": "(self=<tourism.tourism.doctype.registration.registration.Registration object>)", 
+   "dump": {
+    "email": "undefined", 
+    "mail_to_user": "undefined", 
+    "self": "<tourism.tourism.doctype.registration.registration.Registration object>", 
+    "send_mail": "undefined"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", 
+   "func": "on_submit", 
+   "lines": {
+    "11": "\tdef on_submit(self):", 
+    "12": "\t\tfrappe.msgprint(\"Registered successfully\")", 
+    "13": "\t\tmail_to_user=send_mail(self,email)", 
+    "14": "", 
+    "15": ""
+   }, 
+   "lnum": 13
+  }
+ ], 
+ "locals": {
+  "self": "<tourism.tourism.doctype.registration.registration.Registration object>"
+ }, 
+ "pyver": "Python 2.7.12: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/bin/python (prefix: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env)", 
+ "timestamp": "2019-06-13 10:54:39.483206", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py\", line 1032, in call\n    return fn(*args, **newargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/save.py\", line 19, in savedocs\n    doc.submit()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 848, in submit\n    self._submit()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 837, in _submit\n    self.save()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 260, in save\n    return self._save(*args, **kwargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 313, in _save\n    self.run_post_save_methods()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 908, in run_post_save_methods\n    self.run_method(\"on_submit\")\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 772, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 1048, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 1031, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py\", line 766, in <lambda>\n    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py\", line 13, in on_submit\n    mail_to_user=send_mail(self,email)\nNameError: global name 'send_mail' is not defined\n"
+}

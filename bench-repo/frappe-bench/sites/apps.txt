@@ -1,0 +1,5 @@
+frappe
+erpnext
+registration
+maharashtra_tourism
+tourism

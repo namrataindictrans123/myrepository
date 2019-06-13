@@ -1,0 +1,1284 @@
+[ERROR] 2019-06-10 10:57:29,803 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: registration_site
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 58, in application
+    init_request(request)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 120, in init_request
+    frappe.local.http_request = frappe.auth.HTTPRequest()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_lang()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 86, in set_lang
+    frappe.local.lang = guess_language()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 29, in guess_language
+    lang_list = get_all_languages() or []
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 85, in get_all_languages
+    return frappe.cache().get_value('languages', _get)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 79, in get_value
+    val = generator()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 84, in _get
+    return frappe.db.sql_list('select name from tabLanguage')
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 277, in sql_list
+    return [r[0] for r in self.sql(query, values, debug=debug)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+[ERROR] 2019-06-10 10:57:29,953 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-10 10:57:29.804357-127.0.0.1-7e4
+[ERROR] 2019-06-10 14:09:31,151 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: registration_site
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 58, in application
+    init_request(request)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 120, in init_request
+    frappe.local.http_request = frappe.auth.HTTPRequest()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_lang()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 86, in set_lang
+    frappe.local.lang = guess_language()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 29, in guess_language
+    lang_list = get_all_languages() or []
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 85, in get_all_languages
+    return frappe.cache().get_value('languages', _get)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 79, in get_value
+    val = generator()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 84, in _get
+    return frappe.db.sql_list('select name from tabLanguage')
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 277, in sql_list
+    return [r[0] for r in self.sql(query, values, debug=debug)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+[ERROR] 2019-06-10 14:09:31,288 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-10 14:09:31.176055-127.0.0.1-fe2
+[ERROR] 2019-06-10 14:10:12,652 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: registration_site
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 58, in application
+    init_request(request)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 120, in init_request
+    frappe.local.http_request = frappe.auth.HTTPRequest()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_lang()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 86, in set_lang
+    frappe.local.lang = guess_language()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 29, in guess_language
+    lang_list = get_all_languages() or []
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 85, in get_all_languages
+    return frappe.cache().get_value('languages', _get)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 79, in get_value
+    val = generator()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 84, in _get
+    return frappe.db.sql_list('select name from tabLanguage')
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 277, in sql_list
+    return [r[0] for r in self.sql(query, values, debug=debug)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+[ERROR] 2019-06-10 14:10:12,765 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-10 14:10:12.652802-127.0.0.1-025
+[ERROR] 2019-06-10 14:47:14,000 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: registration_site
+Form Dict: {
+ "cmd": "frappe.client.insert", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Module Def\",\"name\":\"New Module Def 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"__run_link_triggers\":1,\"module_name\":\"Registration\",\"app_name\":\"Maharashtra_torism\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/client.py", line 155, in insert
+    doc = frappe.get_doc(doc).insert()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 249, in insert
+    self.run_post_save_methods()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 905, in run_post_save_methods
+    self.run_method("on_update")
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/core/doctype/module_def/module_def.py", line 15, in on_update
+    self.create_modules_folder()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/core/doctype/module_def/module_def.py", line 20, in create_modules_folder
+    module_path = frappe.get_app_path(self.app_name, self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 827, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 842, in get_pymodule_path
+    return os.path.join(os.path.dirname(get_module(scrub(modulename)).__file__), *joins)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named maharashtra_torism
+[ERROR] 2019-06-10 14:47:14,127 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-10 14:47:14.001262-127.0.0.1-099
+[ERROR] 2019-06-10 18:15:21,657 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: registration_site
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration_form\",\"name\":\"New Registration_form 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Miss\",\"gender\":\"Female\",\"city\":\"Pune\",\"country\":\"India\",\"first_name\":\"Namrata\",\"last_name\":\"Ingale\",\"dob\":\"2019-06-01\",\"address\":\"Pune\",\"state\":\"Maharashtra\",\"email\":\"namrata.i@indictrans.in\",\"pin\":\"411056\",\"mobile\":\"657383579025\",\"fax\":\"namrata.i\",\"language\":\"English\",\"username\":\"namrata\",\"password\":\"admin\",\"cpass\":\"admin\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+TypeError: runserverobj() takes at least 1 argument (1 given)
+[ERROR] 2019-06-10 18:15:21,822 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-10 18:15:21.697230-127.0.0.1-6e9
+[ERROR] 2019-06-11 11:58:04,361 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Mr\",\"gender\":\"Male\",\"city\":\"Pune\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+TypeError: runserverobj() takes at least 1 argument (1 given)
+[ERROR] 2019-06-11 11:58:04,559 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 11:58:04.400587-127.0.0.1-751
+[ERROR] 2019-06-11 12:01:29,503 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Mr\",\"gender\":\"Male\",\"city\":\"Pune\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 12:01:29,521 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 12:01:29.515125-127.0.0.1-561
+[ERROR] 2019-06-11 12:01:39,907 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Mr\",\"gender\":\"Male\",\"city\":\"Pune\"}", 
+ "method": "clear"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'clear'
+[ERROR] 2019-06-11 12:01:39,911 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 12:01:39.908292-127.0.0.1-e7c
+[ERROR] 2019-06-11 12:02:38,491 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Mr\",\"gender\":\"Male\",\"city\":\"Pune\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 12:02:38,497 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 12:02:38.492753-127.0.0.1-77a
+[ERROR] 2019-06-11 12:53:44,974 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 12:53:45,188 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 12:53:45.011132-127.0.0.1-e2a
+[ERROR] 2019-06-11 13:05:42,830 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"Miss\",\"city\":\"Pune\",\"gender\":\"Female\",\"country\":\"India\",\"first_name\":\"Namrata\",\"last_name\":\"Ingale\",\"dob\":\"1995-09-01\",\"address\":\"Pune\",\"pin\":\"411056\",\"fax\":\"namrata.i\",\"state\":\"Maharashtra\",\"email\":\"namrata.i@indictrans.in\",\"mobile\":\"63789387593\",\"language\":\"English\",\"username\":\"namrata\",\"password\":\"namrata\",\"password2\":\"namrata\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 13:05:42,839 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 13:05:42.830489-127.0.0.1-b23
+[ERROR] 2019-06-11 15:28:03,145 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:28:03,253 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:28:03.181339-127.0.0.1-2a5
+[ERROR] 2019-06-11 15:38:26,320 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:38:26,324 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:38:26.321269-127.0.0.1-d4f
+[ERROR] 2019-06-11 15:38:28,913 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "clear"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'clear'
+[ERROR] 2019-06-11 15:38:28,917 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:38:28.914230-127.0.0.1-b44
+[ERROR] 2019-06-11 15:41:19,771 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:41:19,774 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:41:19.772316-127.0.0.1-468
+[ERROR] 2019-06-11 15:43:32,641 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"Banglore\",\"gender\":\"Male\",\"country\":\"Iran\",\"first_name\":\"abc\",\"last_name\":\"abc\",\"dob\":\"2019-06-26\",\"address\":\"Iran\",\"pin\":\"324\",\"fax\":\"vfdv\",\"state\":\"dfgfdg\",\"email\":\"ggg\",\"mobile\":\"4657\",\"language\":\"jghj\",\"username\":\"hgj\",\"password\":\"abc\",\"password2\":\"abc\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:43:32,645 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:43:32.641926-127.0.0.1-549
+[ERROR] 2019-06-11 15:43:40,549 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"Banglore\",\"gender\":\"Male\",\"country\":\"Iran\",\"first_name\":\"abc\",\"last_name\":\"abc\",\"dob\":\"2019-06-26\",\"address\":\"Iran\",\"pin\":\"324\",\"fax\":\"vfdv\",\"state\":\"dfgfdg\",\"email\":\"ggg\",\"mobile\":\"4657\",\"language\":\"jghj\",\"username\":\"hgj\",\"password\":\"abc\",\"password2\":\"abc\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:43:40,557 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:43:40.549648-127.0.0.1-410
+[ERROR] 2019-06-11 15:46:56,927 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"password2\":\"***\",\"last_name\":\"abc\",\"pin\":\"324\",\"creation\":\"2019-06-11 15:43:47.069471\",\"doctype\":\"Registration\",\"salutation\":\"--Select--\",\"owner\":\"Administrator\",\"city\":\"Banglore\",\"first_name\":\"abc\",\"modified_by\":\"Administrator\",\"idx\":0,\"state\":\"dfgfdg\",\"docstatus\":0,\"email\":\"ggg\",\"username\":\"hgj\",\"fax\":\"vfdv\",\"parent\":null,\"address\":\"Iran\",\"password\":\"***\",\"name\":\"abc\",\"language\":\"jghj\",\"dob\":\"2019-06-26\",\"gender\":\"Male\",\"modified\":\"2019-06-11 15:43:47.069471\",\"mobile\":\"4657\",\"parenttype\":null,\"country\":\"Iran\",\"others\":null,\"parentfield\":null,\"__last_sync_on\":\"2019-06-11T10:13:47.285Z\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-11 15:46:56,931 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:46:56.928047-127.0.0.1-f31
+[ERROR] 2019-06-11 15:52:45,615 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "2019-06-11 15:37:43.983908", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 12
+    if(password != password2) {
+                              ^
+SyntaxError: invalid syntax
+[ERROR] 2019-06-11 15:52:47,317 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 15:52:45.640074-127.0.0.1-e79
+[ERROR] 2019-06-11 16:23:56,611 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"Male\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 36, in runserverobj
+    r = doc.run_method(method)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 12, in register
+    
+NameError: global name 'password' is not defined
+[ERROR] 2019-06-11 16:23:56,621 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 16:23:56.612131-127.0.0.1-513
+[ERROR] 2019-06-11 18:52:05,065 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\",\"password\":\"Admin@123\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 36, in runserverobj
+    r = doc.run_method(method)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 12, in register
+NameError: global name 'password' is not defined
+[ERROR] 2019-06-11 18:52:05,234 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-11 18:52:05.105013-127.0.0.1-238
+[ERROR] 2019-06-12 09:56:05,248 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 58, in application
+    init_request(request)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 120, in init_request
+    frappe.local.http_request = frappe.auth.HTTPRequest()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 42, in __init__
+    self.set_lang()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", line 86, in set_lang
+    frappe.local.lang = guess_language()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 29, in guess_language
+    lang_list = get_all_languages() or []
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 85, in get_all_languages
+    return frappe.cache().get_value('languages', _get)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 79, in get_value
+    val = generator()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", line 84, in _get
+    return frappe.db.sql_list('select name from tabLanguage')
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 277, in sql_list
+    return [r[0] for r in self.sql(query, values, debug=debug)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 165, in sql
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", line 115, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)")
+[ERROR] 2019-06-12 09:56:05,438 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 09:56:05.309532-127.0.0.1-b44
+[ERROR] 2019-06-12 09:58:33,450 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 11
+    def notify_to_approver(name):
+                                ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 09:58:33,590 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 09:58:33.451860-127.0.0.1-792
+[ERROR] 2019-06-12 10:00:21,402 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 11
+    def notify_to_approver(name):
+                                ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:00:24,724 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:00:21.411410-127.0.0.1-25a
+[ERROR] 2019-06-12 10:01:54,181 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 16
+    def send_mail_custom(recipients):
+                                    ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:01:57,574 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:01:54.199830-127.0.0.1-5db
+[ERROR] 2019-06-12 10:04:18,049 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 16
+    def send_mail_custom(recipients):
+                                    ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:04:21,429 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:04:18.082760-127.0.0.1-d04
+[ERROR] 2019-06-12 10:05:52,283 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 16
+    def send_mail_custom(recipients):
+                                    ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:05:55,616 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:05:52.294046-127.0.0.1-916
+[ERROR] 2019-06-12 10:11:01,837 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 15
+    def send_mail_custom(reciepients):
+                                     ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:11:03,744 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:11:01.847009-127.0.0.1-b41
+[ERROR] 2019-06-12 10:11:30,896 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 15
+    def send_mail_custom(reciepients):
+                                     ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 10:11:34,129 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:11:30.956945-127.0.0.1-c3c
+[ERROR] 2019-06-12 10:23:00,860 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-12 10:23:01,022 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:23:00.861394-127.0.0.1-912
+[ERROR] 2019-06-12 10:32:26,653 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-12 10:32:26,679 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:32:26.675950-127.0.0.1-ca6
+[ERROR] 2019-06-12 10:41:23,444 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-12 10:41:23,448 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:41:23.445285-127.0.0.1-499
+[ERROR] 2019-06-12 10:47:38,648 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 36, in runserverobj
+    r = doc.run_method(method)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 772, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1048, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 1031, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/model/document.py", line 766, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 11, in register
+    msgprint("registered")
+NameError: global name 'msgprint' is not defined
+[ERROR] 2019-06-12 10:47:39,066 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 10:47:38.649170-127.0.0.1-47c
+[ERROR] 2019-06-12 11:10:47,617 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\",\"idx\":0}", 
+ "method": "clear"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'clear'
+[ERROR] 2019-06-12 11:10:47,786 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 11:10:47.617967-127.0.0.1-74a
+[ERROR] 2019-06-12 11:16:34,583 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\",\"dob\":\"2019-06-24\",\"address\":\"Pune\"}", 
+ "method": "clear"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'clear'
+[ERROR] 2019-06-12 11:16:34,587 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 11:16:34.583962-127.0.0.1-eb3
+[ERROR] 2019-06-12 11:48:45,703 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 2\",\"__islocal\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\",\"idx\":0}", 
+ "method": "clear"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'clear'
+[ERROR] 2019-06-12 11:48:45,901 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 11:48:45.743943-127.0.0.1-04e
+[ERROR] 2019-06-12 12:02:17,037 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "2019-06-12 11:16:08.861683", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 14
+    def validate(self):
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[ERROR] 2019-06-12 12:02:17,189 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 12:02:17.038895-127.0.0.1-cef
+[ERROR] 2019-06-12 12:03:08,571 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "2019-06-12 11:16:08.861683", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 12
+    if(self.password != self.password2):
+     ^
+IndentationError: expected an indented block
+[ERROR] 2019-06-12 12:03:11,838 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 12:03:08.579980-127.0.0.1-f6f
+[ERROR] 2019-06-12 12:04:06,193 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cmd": "runserverobj", 
+ "docs": "{\"docstatus\":0,\"doctype\":\"Registration\",\"name\":\"New Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"salutation\":\"--Select--\",\"city\":\"--Select--\",\"gender\":\"--Select--\",\"country\":\"--Select--\"}", 
+ "method": "register"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 84, in runserverobj
+    frappe.desk.form.run_method.runserverobj(method, docs=docs, dt=dt, dn=dn, arg=arg, args=args)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/run_method.py", line 34, in runserverobj
+    fnargs, varargs, varkw, defaults = inspect.getargspec(getattr(doc, method))
+AttributeError: 'Registration' object has no attribute 'register'
+[ERROR] 2019-06-12 12:04:06,321 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 12:04:06.194282-127.0.0.1-0a5
+[ERROR] 2019-06-12 12:37:47,632 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "2019-06-12 11:16:08.861683", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 30
+    
+    ^
+SyntaxError: invalid syntax
+[ERROR] 2019-06-12 12:37:50,048 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 12:37:47.684865-127.0.0.1-e6e
+[ERROR] 2019-06-12 12:38:56,971 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py:
+Site: register
+Form Dict: {
+ "cached_timestamp": "2019-06-12 11:16:08.861683", 
+ "cmd": "frappe.desk.form.load.getdoctype", 
+ "doctype": "Registration", 
+ "with_parent": "1"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", line 61, in application
+    response = frappe.handler.handle()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 21, in handle
+    data = execute_cmd(cmd)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", line 56, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 1032, in call
+    return fn(*args, **newargs)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 71, in getdoctype
+    docs = get_meta_bundle(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", line 81, in get_meta_bundle
+    bundle = [frappe.desk.form.meta.get_meta(doctype)]
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 29, in get_meta
+    meta = FormMeta(doctype)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 39, in __init__
+    self.load_assets()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 53, in load_assets
+    self.load_templates()
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", line 178, in load_templates
+    module = load_doctype_module(self.name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", line 190, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", line 804, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py", line 29
+    
+    ^
+SyntaxError: invalid syntax
+[ERROR] 2019-06-12 12:38:59,631 | /home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-06-12 12:38:56.978697-127.0.0.1-a5c

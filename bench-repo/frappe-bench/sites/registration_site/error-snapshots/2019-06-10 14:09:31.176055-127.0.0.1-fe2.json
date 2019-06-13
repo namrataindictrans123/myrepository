@@ -1,0 +1,278 @@
+{
+ "etype": "OperationalError", 
+ "evalue": "OperationalError(2003, \"Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)\")", 
+ "exception": {
+  "args": "(2003, \"Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)\")", 
+  "message": "''", 
+  "original_exception": "error(111, 'Connection refused')", 
+  "traceback": "'Traceback (most recent call last):\\n  File \"/home... raise err\\nerror: [Errno 111] Connection refused\\n'"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://localhost:9098/' [GET]>)", 
+   "dump": {
+    "global init_request": "<function init_request>", 
+    "request": "<Request 'http://localhost:9098/' [GET]>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "56": "\t\trollback = True", 
+    "57": "", 
+    "58": "\t\tinit_request(request)", 
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:"
+   }, 
+   "lnum": 58
+  }, 
+  {
+   "call": "(request=<Request 'http://localhost:9098/' [GET]>)", 
+   "dump": {
+    "frappe. auth": "<module 'frappe.auth' from '/home/indictrans/wor...h-repo/frappe-bench/apps/frappe/frappe/auth.pyc'>", 
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.auth. HTTPRequest": "<class frappe.auth.HTTPRequest>", 
+    "frappe.local.http_request": "undefined", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", 
+   "func": "init_request", 
+   "lines": {
+    "118": "\tmake_form_dict(request)", 
+    "119": "", 
+    "120": "\tfrappe.local.http_request = frappe.auth.HTTPRequest()", 
+    "121": "", 
+    "122": "def make_form_dict(request):"
+   }, 
+   "lnum": 120
+  }, 
+  {
+   "call": "(self=<frappe.auth.HTTPRequest instance>)", 
+   "dump": {
+    "self": "<frappe.auth.HTTPRequest instance>", 
+    "self. set_lang": "<bound method HTTPRequest.set_lang of <frappe.auth.HTTPRequest instance>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", 
+   "func": "__init__", 
+   "lines": {
+    "40": "", 
+    "41": "\t\t# language", 
+    "42": "\t\tself.set_lang()", 
+    "43": "", 
+    "44": "\t\t# load cookies"
+   }, 
+   "lnum": 42
+  }, 
+  {
+   "call": "(self=<frappe.auth.HTTPRequest instance>)", 
+   "dump": {
+    "frappe. local": "<werkzeug.local.Local object>", 
+    "frappe.local. lang": "u'en'", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "guess_language": "<function guess_language>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py", 
+   "func": "set_lang", 
+   "lines": {
+    "84": "\tdef set_lang(self):", 
+    "85": "\t\tfrom frappe.translate import guess_language", 
+    "86": "\t\tfrappe.local.lang = guess_language()", 
+    "87": "", 
+    "88": "\tdef get_db_name(self):"
+   }, 
+   "lnum": 86
+  }, 
+  {
+   "call": "(lang_list=None)", 
+   "dump": {
+    "global get_all_languages": "<function get_all_languages>", 
+    "lang_list": "None"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", 
+   "func": "guess_language", 
+   "lines": {
+    "27": "\tguess = None", 
+    "28": "\tif not lang_list:", 
+    "29": "\t\tlang_list = get_all_languages() or []", 
+    "30": "", 
+    "31": "\tfor l in lang_codes:"
+   }, 
+   "lnum": 29
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    ").get_value": "undefined", 
+    "_get": "<function _get>", 
+    "frappe. cache": "<function cache>", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", 
+   "func": "get_all_languages", 
+   "lines": {
+    "83": "\t\t\tfrappe.connect()", 
+    "84": "\t\treturn frappe.db.sql_list('select name from tabLanguage')", 
+    "85": "\treturn frappe.cache().get_value('languages', _get)", 
+    "86": "", 
+    "87": "def get_lang_dict():"
+   }, 
+   "lnum": 85
+  }, 
+  {
+   "call": "(self=RedisWrapper<ConnectionPool<Connection<host=localhost,port=13000,db=0>>>, key='eca71837bc1e99d1|languages', generator=<function _get>, user=None, expires=False)", 
+   "dump": {
+    "generator": "<function _get>", 
+    "val": "None"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", 
+   "func": "get_value", 
+   "lines": {
+    "77": "\t\t\tif not expires:", 
+    "78": "\t\t\t\tif val is None and generator:", 
+    "79": "\t\t\t\t\tval = generator()", 
+    "80": "\t\t\t\t\tself.set_value(original_key, val, user=user)", 
+    "81": ""
+   }, 
+   "lnum": 79
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "frappe. db": "<frappe.database.Database instance>", 
+    "frappe.db. sql_list": "<bound method Database.sql_list of <frappe.database.Database instance>>", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py", 
+   "func": "_get", 
+   "lines": {
+    "82": "\t\tif not frappe.db:", 
+    "83": "\t\t\tfrappe.connect()", 
+    "84": "\t\treturn frappe.db.sql_list('select name from tabLanguage')", 
+    "85": "\treturn frappe.cache().get_value('languages', _get)", 
+    "86": ""
+   }, 
+   "lnum": 84
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select name from tabLanguage', values=(), debug=False)", 
+   "dump": {
+    "debug": "False", 
+    "query": "u'select name from tabLanguage'", 
+    "r": "undefined", 
+    "self": "<frappe.database.Database instance>", 
+    "self. sql": "<bound method Database.sql of <frappe.database.Database instance>>", 
+    "values": "()"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", 
+   "func": "sql_list", 
+   "lines": {
+    "275": "\t\t\tdoctypes = frappe.db.sql_list(\"select name from DocType\")", 
+    "276": "\t\t\"\"\"", 
+    "277": "\t\treturn [r[0] for r in self.sql(query, values, debug=debug)]", 
+    "278": "", 
+    "279": "\tdef sql_ddl(self, query, values=(), debug=False):"
+   }, 
+   "lnum": 277
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>, query=u'select name from tabLanguage', values=(), as_dict=0, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False)", 
+   "dump": {
+    "self": "<frappe.database.Database instance>", 
+    "self. connect": "<bound method Database.connect of <frappe.database.Database instance>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", 
+   "func": "sql", 
+   "lines": {
+    "163": "\t\t\"\"\"", 
+    "164": "\t\tif not self._conn:", 
+    "165": "\t\t\tself.connect()", 
+    "166": "", 
+    "167": "\t\t# in transaction validations"
+   }, 
+   "lnum": 165
+  }, 
+  {
+   "call": "(self=<frappe.database.Database instance>)", 
+   "dump": {
+    "builtin True": "True", 
+    "charset": "undefined", 
+    "conv": "undefined", 
+    "global conversions": "{0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}", 
+    "local_infile": "undefined", 
+    "self": "<frappe.database.Database instance>", 
+    "self. local_infile": "None", 
+    "use_unicode": "undefined"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py", 
+   "func": "connect", 
+   "lines": {
+    "113": "\t\telse:", 
+    "114": "\t\t\tself._conn = pymysql.connect(self.host, self.user or '', self.password or '',", 
+    "115": "\t\t\t\tcharset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)", 
+    "116": "", 
+    "117": "\t\t# MYSQL_OPTION_MULTI_STATEMENTS_OFF = 1"
+   }, 
+   "lnum": 115
+  }, 
+  {
+   "call": "(*args=(u'localhost', u'eca71837bc1e99d1', u'dkDYpXoRMQYfYGIa'), **kwargs={'charset': u'utf8mb4', 'conv': {0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, 'local_infile': None, 'use_unicode': True})", 
+   "dump": {
+    "Connection": "<class 'pymysql.connections.Connection'>", 
+    "args": "(u'localhost', u'eca71837bc1e99d1', u'dkDYpXoRMQYfYGIa')", 
+    "kwargs": "{'charset': u'utf8mb4', 'conv': {0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, 'local_infile': None, 'use_unicode': True}"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", 
+   "func": "Connect", 
+   "lines": {
+    "92": "    \"\"\"", 
+    "93": "    from .connections import Connection", 
+    "94": "    return Connection(*args, **kwargs)", 
+    "95": "", 
+    "96": "from . import connections as _orig_conn"
+   }, 
+   "lnum": 94
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, host=u'localhost', user=u'eca71837bc1e99d1', password=u'dkDYpXoRMQYfYGIa', database=None, port=0, unix_socket=None, charset=u'utf8mb4', sql_mode=None, read_default_file=None, conv={0: <class 'decimal.Decimal'>, 1: <type 'int'>, 2: <type 'int'>, 3: <type 'int'>, 4: <type 'float'>, 5: <type 'float'>, 7: <function convert_mysql_timestamp>, 8: <type 'int'>, 9: <type 'int'>, 10: <function convert_date>, ...}, use_unicode=True, client_flag=3842565, cursorclass=<class 'pymysql.cursors.Cursor'>, init_command=None, connect_timeout=10, ssl=None, read_default_group=None, compress=None, named_pipe=None, autocommit=False, db=None, passwd=None, local_infile=None, max_allowed_packet=16777216, defer_connect=False, auth_plugin_map=None, read_timeout=None, write_timeout=None, bind_address=None, binary_prefix=False, program_name=None, server_public_key=None)", 
+   "dump": {
+    "self": "<pymysql.connections.Connection object>", 
+    "self. connect": "<bound method Connection.connect of <pymysql.connections.Connection object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "__init__", 
+   "lines": {
+    "323": "            self._sock = None", 
+    "324": "        else:", 
+    "325": "            self.connect()", 
+    "326": "", 
+    "327": "    def _create_ssl_ctx(self, sslp):"
+   }, 
+   "lnum": 325
+  }, 
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sock=None)", 
+   "dump": {
+    "exc": "OperationalError(2003, \"Can't connect to MySQL s...n u'localhost' ([Errno 111] Connection refused)\")"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", 
+   "func": "connect", 
+   "lines": {
+    "628": "                exc.traceback = traceback.format_exc()", 
+    "629": "                if DEBUG: print(exc.traceback)", 
+    "630": "                raise exc", 
+    "631": "", 
+    "632": "            # If e is neither DatabaseError or IOError, It's a bug."
+   }, 
+   "lnum": 630
+  }
+ ], 
+ "locals": {
+  "e": "error(111, 'Connection refused')", 
+  "exc": "OperationalError(2003, \"Can't connect to MySQL s...n u'localhost' ([Errno 111] Connection refused)\")", 
+  "kwargs": "{}", 
+  "self": "<pymysql.connections.Connection object>", 
+  "sock": "None"
+ }, 
+ "pyver": "Python 2.7.12: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/bin/python (prefix: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env)", 
+ "timestamp": "2019-06-10 14:09:31.176547", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py\", line 58, in application\n    init_request(request)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py\", line 120, in init_request\n    frappe.local.http_request = frappe.auth.HTTPRequest()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py\", line 42, in __init__\n    self.set_lang()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/auth.py\", line 86, in set_lang\n    frappe.local.lang = guess_language()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py\", line 29, in guess_language\n    lang_list = get_all_languages() or []\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py\", line 85, in get_all_languages\n    return frappe.cache().get_value('languages', _get)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py\", line 79, in get_value\n    val = generator()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/translate.py\", line 84, in _get\n    return frappe.db.sql_list('select name from tabLanguage')\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py\", line 277, in sql_list\n    return [r[0] for r in self.sql(query, values, debug=debug)]\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py\", line 165, in sql\n    self.connect()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/database.py\", line 115, in connect\n    charset='utf8mb4', use_unicode = True, conv = conversions, local_infile = self.local_infile)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py\", line 94, in Connect\n    return Connection(*args, **kwargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 325, in __init__\n    self.connect()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py\", line 630, in connect\n    raise exc\nOperationalError: (2003, \"Can't connect to MySQL server on u'localhost' ([Errno 111] Connection refused)\")\n"
+}

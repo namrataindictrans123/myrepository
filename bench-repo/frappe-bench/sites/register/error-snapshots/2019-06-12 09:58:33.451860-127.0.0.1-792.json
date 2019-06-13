@@ -1,0 +1,263 @@
+{
+ "etype": "IndentationError", 
+ "evalue": "IndentationError('unindent does not match any outer indentation level', ('/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py', 11, 34, '    def notify_to_approver(name):\\n'))", 
+ "exception": {
+  "args": "('unindent does not match any outer indentation level', ('/home/indictrans/workspace/Registration/bench-re...rism/tourism/doctype/registration/registration.py', 11, 34, '    def notify_to_approver(name):\\n'))", 
+  "filename": "'/home/indictrans/workspace/Registration/bench-re...rism/tourism/doctype/registration/registration.py'", 
+  "lineno": "11", 
+  "message": "''", 
+  "msg": "'unindent does not match any outer indentation level'", 
+  "offset": "34", 
+  "print_file_and_line": "None", 
+  "text": "'    def notify_to_approver(name):\\n'"
+ }, 
+ "frames": [
+  {
+   "call": "(request=<Request 'http://localhost:9001/?doctype=Registr...desk.form.load.getdoctype&_=1560313703035' [GET]>)", 
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/indictrans/...epo/frappe-bench/apps/frappe/frappe/handler.pyc'>", 
+    "frappe.handler. handle": "<function handle>", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "response": "None"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py", 
+   "func": "application", 
+   "lines": {
+    "59": "", 
+    "60": "\t\tif frappe.local.form_dict.cmd:", 
+    "61": "\t\t\tresponse = frappe.handler.handle()", 
+    "62": "", 
+    "63": "\t\telif frappe.request.path.startswith(\"/api/\"):"
+   }, 
+   "lnum": 61
+  }, 
+  {
+   "call": "()", 
+   "dump": {
+    "cmd": "u'frappe.desk.form.load.getdoctype'", 
+    "data": "None", 
+    "global execute_cmd": "<function execute_cmd>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", 
+   "func": "handle", 
+   "lines": {
+    "19": "", 
+    "20": "\tif cmd!='login':", 
+    "21": "\t\tdata = execute_cmd(cmd)", 
+    "22": "", 
+    "23": "\t# data can be an empty string or list which are valid responses"
+   }, 
+   "lnum": 21
+  }, 
+  {
+   "call": "(cmd=u'frappe.desk.form.load.getdoctype', from_async=False)", 
+   "dump": {
+    "frappe. call": "<function call>", 
+    "frappe. form_dict": "{'cmd': u'frappe.desk.form.load.getdoctype', 'wi...ctype': u'Registration', 'cached_timestamp': u''}", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "method": "<function getdoctype>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py", 
+   "func": "execute_cmd", 
+   "lines": {
+    "54": "\tis_whitelisted(method)", 
+    "55": "", 
+    "56": "\treturn frappe.call(method, **frappe.form_dict)", 
+    "57": "", 
+    "58": ""
+   }, 
+   "lnum": 56
+  }, 
+  {
+   "call": "(fn=<function getdoctype>, *args=(), **kwargs={'cached_timestamp': u'', 'cmd': u'frappe.desk.form.load.getdoctype', 'doctype': u'Registration', 'with_parent': u'1'})", 
+   "dump": {
+    "args": "()", 
+    "fn": "<function getdoctype>", 
+    "newargs": "{'cached_timestamp': u'', 'doctype': u'Registration', 'with_parent': u'1'}"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", 
+   "func": "call", 
+   "lines": {
+    "1030": "\tnewargs = get_newargs(fn, kwargs)", 
+    "1031": "", 
+    "1032": "\treturn fn(*args, **newargs)", 
+    "1033": "", 
+    "1034": "def get_newargs(fn, kwargs):"
+   }, 
+   "lnum": 1032
+  }, 
+  {
+   "call": "(doctype=u'Registration', with_parent=u'1', cached_timestamp=u'')", 
+   "dump": {
+    "docs": "[]", 
+    "doctype": "u'Registration'", 
+    "global get_meta_bundle": "<function get_meta_bundle>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", 
+   "func": "getdoctype", 
+   "lines": {
+    "69": "", 
+    "70": "\tif not docs:", 
+    "71": "\t\tdocs = get_meta_bundle(doctype)", 
+    "72": "", 
+    "73": "\tfrappe.response['user_settings'] = get_user_settings(parent_dt or doctype)"
+   }, 
+   "lnum": 71
+  }, 
+  {
+   "call": "(doctype=u'Registration')", 
+   "dump": {
+    "bundle": "undefined", 
+    "doctype": "u'Registration'", 
+    "frappe. desk": "<module 'frappe.desk' from '/home/indictrans/wor...appe-bench/apps/frappe/frappe/desk/__init__.pyc'>", 
+    "frappe.desk. form": "<module 'frappe.desk.form' from '/home/indictran...bench/apps/frappe/frappe/desk/form/__init__.pyc'>", 
+    "frappe.desk.form. meta": "<module 'frappe.desk.form.meta' from '/home/indi...ppe-bench/apps/frappe/frappe/desk/form/meta.pyc'>", 
+    "frappe.desk.form.meta. get_meta": "<function get_meta>", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py", 
+   "func": "get_meta_bundle", 
+   "lines": {
+    "79": "", 
+    "80": "def get_meta_bundle(doctype):", 
+    "81": "\tbundle = [frappe.desk.form.meta.get_meta(doctype)]", 
+    "82": "\tfor df in bundle[0].fields:", 
+    "83": "\t\tif df.fieldtype==\"Table\":"
+   }, 
+   "lnum": 81
+  }, 
+  {
+   "call": "(doctype=u'Registration', cached=True)", 
+   "dump": {
+    "doctype": "u'Registration'", 
+    "global FormMeta": "<class 'frappe.desk.form.meta.FormMeta'>", 
+    "meta": "undefined"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", 
+   "func": "get_meta", 
+   "lines": {
+    "27": "\t\t\tfrappe.cache().hset(\"form_meta\", doctype, meta.as_dict())", 
+    "28": "\telse:", 
+    "29": "\t\tmeta = FormMeta(doctype)", 
+    "30": "", 
+    "31": "\tif frappe.local.lang != 'en':"
+   }, 
+   "lnum": 29
+  }, 
+  {
+   "call": "(self=<frappe.desk.form.meta.FormMeta object>, doctype=u'Registration')", 
+   "dump": {
+    "self": "<frappe.desk.form.meta.FormMeta object>", 
+    "self. load_assets": "<bound method FormMeta.load_assets of <frappe.desk.form.meta.FormMeta object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", 
+   "func": "__init__", 
+   "lines": {
+    "37": "\tdef __init__(self, doctype):", 
+    "38": "\t\tsuper(FormMeta, self).__init__(doctype)", 
+    "39": "\t\tself.load_assets()", 
+    "40": "", 
+    "41": "\tdef load_assets(self):"
+   }, 
+   "lnum": 39
+  }, 
+  {
+   "call": "(self=<frappe.desk.form.meta.FormMeta object>)", 
+   "dump": {
+    "self": "<frappe.desk.form.meta.FormMeta object>", 
+    "self. load_templates": "<bound method FormMeta.load_templates of <frappe.desk.form.meta.FormMeta object>>"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", 
+   "func": "load_assets", 
+   "lines": {
+    "51": "\t\t\tself.load_print_formats()", 
+    "52": "\t\t\tself.load_workflows()", 
+    "53": "\t\t\tself.load_templates()", 
+    "54": "\t\t\tself.load_dashboard()", 
+    "55": "\t\t\tself.load_kanban_meta()"
+   }, 
+   "lnum": 53
+  }, 
+  {
+   "call": "(self=<frappe.desk.form.meta.FormMeta object>)", 
+   "dump": {
+    "global load_doctype_module": "<function load_doctype_module>", 
+    "module": "undefined", 
+    "self": "<frappe.desk.form.meta.FormMeta object>", 
+    "self. name": "u'Registration'"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py", 
+   "func": "load_templates", 
+   "lines": {
+    "176": "\tdef load_templates(self):", 
+    "177": "\t\tif not self.custom:", 
+    "178": "\t\t\tmodule = load_doctype_module(self.name)", 
+    "179": "\t\t\tapp = module.__name__.split(\".\")[0]", 
+    "180": "\t\t\ttemplates = {}"
+   }, 
+   "lnum": 178
+  }, 
+  {
+   "call": "(doctype=u'Registration', module=u'Tourism', prefix=u'', suffix=u'')", 
+   "dump": {
+    "frappe. get_module": "<function get_module>", 
+    "global doctype_python_modules": "{(u'erpnext', u'BOM', u'', u''): <module 'erpnext.manufacturing.doctype.bom.bom' ...pnext/erpnext/manufacturing/doctype/bom/bom.pyc'>, (u'erpnext', u'Chapter', u'', u''): <module 'erpnext.non_profit.doctype.chapter.chap.../erpnext/non_profit/doctype/chapter/chapter.pyc'>, (u'erpnext', u'Grant Application', u'', u''): <module 'erpnext.non_profit.doctype.grant_applic...doctype/grant_application/grant_application.pyc'>, (u'erpnext', u'Homepage', u'', u''): <module 'erpnext.portal.doctype.homepage.homepag...xt/erpnext/portal/doctype/homepage/homepage.pyc'>, (u'erpnext', u'Homepage Featured Product', u'', u''): <module 'erpnext.portal.doctype.homepage_feature..._featured_product/homepage_featured_product.pyc'>, (u'erpnext', u'Item', u'', u''): <module 'erpnext.stock.doctype.item.item' from '...pps/erpnext/erpnext/stock/doctype/item/item.pyc'>, (u'erpnext', u'Item Group', u'', u''): <module 'erpnext.setup.doctype.item_group.item_g...erpnext/setup/doctype/item_group/item_group.pyc'>, (u'erpnext', u'Job Opening', u'', u''): <module 'erpnext.hr.doctype.job_opening.job_open.../erpnext/hr/doctype/job_opening/job_opening.pyc'>, (u'erpnext', u'Sales Partner', u'', u''): <module 'erpnext.setup.doctype.sales_partner.sal...t/setup/doctype/sales_partner/sales_partner.pyc'>, (u'erpnext', u'Shopping Cart Settings', u'', u''): <module 'erpnext.shopping_cart.doctype.shopping_...opping_cart_settings/shopping_cart_settings.pyc'>, ...}", 
+    "global frappe": "<module 'frappe' from '/home/indictrans/workspac...po/frappe-bench/apps/frappe/frappe/__init__.pyc'>", 
+    "key": "(u'tourism', u'Registration', u'', u'')", 
+    "module_name": "u'tourism.tourism.doctype.registration.registration'"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py", 
+   "func": "load_doctype_module", 
+   "lines": {
+    "188": "\ttry:", 
+    "189": "\t\tif key not in doctype_python_modules:", 
+    "190": "\t\t\tdoctype_python_modules[key] = frappe.get_module(module_name)", 
+    "191": "\texcept ImportError as e:", 
+    "192": "\t\traise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))"
+   }, 
+   "lnum": 190
+  }, 
+  {
+   "call": "(modulename=u'tourism.tourism.doctype.registration.registration')", 
+   "dump": {
+    "global importlib": "<module 'importlib' from '/usr/lib/python2.7/importlib/__init__.pyc'>", 
+    "importlib. import_module": "<function import_module>", 
+    "modulename": "u'tourism.tourism.doctype.registration.registration'"
+   }, 
+   "file": "/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py", 
+   "func": "get_module", 
+   "lines": {
+    "802": "def get_module(modulename):", 
+    "803": "\t\"\"\"Returns a module object for given Python module name using `importlib.import_module`.\"\"\"", 
+    "804": "\treturn importlib.import_module(modulename)", 
+    "805": "", 
+    "806": "def scrub(txt):"
+   }, 
+   "lnum": 804
+  }, 
+  {
+   "call": "(name=u'tourism.tourism.doctype.registration.registration', package=None)", 
+   "dump": {
+    "builtin __import__": "<built-in function __import__>", 
+    "name": "u'tourism.tourism.doctype.registration.registration'"
+   }, 
+   "file": "/usr/lib/python2.7/importlib/__init__.py", 
+   "func": "import_module", 
+   "lines": {
+    "34": "                break", 
+    "35": "            level += 1", 
+    "36": "        name = _resolve_name(name[level:], package, level)", 
+    "37": "    __import__(name)", 
+    "38": "    return sys.modules[name]"
+   }, 
+   "lnum": 37
+  }
+ ], 
+ "locals": {
+  "name": "u'tourism.tourism.doctype.registration.registration'", 
+  "package": "None"
+ }, 
+ "pyver": "Python 2.7.12: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env/bin/python (prefix: /home/indictrans/workspace/Registration/bench-repo/frappe-bench/env)", 
+ "timestamp": "2019-06-12 09:58:33.452044", 
+ "traceback": "Traceback (most recent call last):\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/app.py\", line 61, in application\n    response = frappe.handler.handle()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py\", line 21, in handle\n    data = execute_cmd(cmd)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/handler.py\", line 56, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py\", line 1032, in call\n    return fn(*args, **newargs)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py\", line 71, in getdoctype\n    docs = get_meta_bundle(doctype)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/load.py\", line 81, in get_meta_bundle\n    bundle = [frappe.desk.form.meta.get_meta(doctype)]\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py\", line 29, in get_meta\n    meta = FormMeta(doctype)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py\", line 39, in __init__\n    self.load_assets()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py\", line 53, in load_assets\n    self.load_templates()\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/desk/form/meta.py\", line 178, in load_templates\n    module = load_doctype_module(self.name)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/modules/utils.py\", line 190, in load_doctype_module\n    doctype_python_modules[key] = frappe.get_module(module_name)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/frappe/frappe/__init__.py\", line 804, in get_module\n    return importlib.import_module(modulename)\n  File \"/usr/lib/python2.7/importlib/__init__.py\", line 37, in import_module\n    __import__(name)\n  File \"/home/indictrans/workspace/Registration/bench-repo/frappe-bench/apps/tourism/tourism/tourism/doctype/registration/registration.py\", line 11\n    def notify_to_approver(name):\n                                ^\nIndentationError: unindent does not match any outer indentation level\n"
+}

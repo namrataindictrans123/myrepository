@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include maharashtra_tourism *.css
+recursive-include maharashtra_tourism *.csv
+recursive-include maharashtra_tourism *.html
+recursive-include maharashtra_tourism *.ico
+recursive-include maharashtra_tourism *.js
+recursive-include maharashtra_tourism *.json
+recursive-include maharashtra_tourism *.md
+recursive-include maharashtra_tourism *.png
+recursive-include maharashtra_tourism *.py
+recursive-include maharashtra_tourism *.svg
+recursive-include maharashtra_tourism *.txt
+recursive-exclude maharashtra_tourism *.pyc
